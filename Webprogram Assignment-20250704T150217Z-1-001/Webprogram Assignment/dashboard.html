@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ECVG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="nav-link" href="/dashboard.html">
+                    <img src="/public/assets/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="dashboard-link">
+                                <i class="fas fa-chart-line me-2"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="forum-link">
+                                <i class="fas fa-comments me-2"></i>Discussion Forum
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="profile-icon">
+                                    <span id="profile-initial"></span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><h6 class="dropdown-header">Welcome, <span id="user-name">User</span>!</h6></li>
+                                <li><a class="dropdown-item" href="#" id="view-profile"><i class="fas fa-user me-2"></i>View Profile</a></li>
+                                <li><a class="dropdown-item" href="#" id="settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" id="logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Content -->
+            <div id="dashboard-content" class="content-section active">
+                <div class="container-fluid">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="page-title">Dashboard</h2>
+                            </div>
+                    </div>
+                    
+                    <!-- Stats Cards -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-card-body">
+                                    <div class="stat-icon blue-bg">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>1,286</h3>
+                                        <p>Active Users</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-card-body">
+                                    <div class="stat-icon green-bg">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>+15.8%</h3>
+                                        <p>Growth Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-card-body">
+                                    <div class="stat-icon orange-bg">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>64</h3>
+                                        <p>New Reports</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-card-body">
+                                    <div class="stat-icon purple-bg">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>85.6%</h3>
+                                        <p>Task Completion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Charts -->
+                    <div class="row">
+                        <div class="col-lg-8 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Performance Overview</h5>
+                                    <div class="card-actions">
+                                        <select class="form-select form-select-sm">
+                                            <option>Last 7 days</option>
+                                            <option>Last 30 days</option>
+                                            <option>This year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <div class="chart-placeholder">
+                                            <!-- Chart will be rendered here with real data -->
+                                            <div class="chart-placeholder-bars">
+                                                <div class="bar" style="height: 60%"></div>
+                                                <div class="bar" style="height: 80%"></div>
+                                                <div class="bar" style="height: 65%"></div>
+                                                <div class="bar" style="height: 90%"></div>
+                                                <div class="bar" style="height: 75%"></div>
+                                                <div class="bar" style="height: 85%"></div>
+                                                <div class="bar" style="height: 95%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Traffic Sources</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="donut-chart-placeholder">
+                                        <div class="donut-segment" style="--offset: 0; --value: 40; --bg: #3776EC"></div>
+                                        <div class="donut-segment" style="--offset: 40; --value: 30; --bg: #60A5E8"></div>
+                                        <div class="donut-segment" style="--offset: 70; --value: 20; --bg: #2E8EE5"></div>
+                                        <div class="donut-segment" style="--offset: 90; --value: 10; --bg: #081329"></div>
+                                        <div class="donut-hole">85%</div>
+                                    </div>
+                                    <div class="sources-legend">
+                                        <div class="legend-item">
+                                            <span class="legend-color" style="background-color: #3776EC;"></span>
+                                            <span>Direct</span>
+                                            <span class="legend-value">40%</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-color" style="background-color: #60A5E8;"></span>
+                                            <span>Social</span>
+                                            <span class="legend-value">30%</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-color" style="background-color: #2E8EE5;"></span>
+                                            <span>Referral</span>
+                                            <span class="legend-value">20%</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="legend-color" style="background-color: #081329;"></span>
+                                            <span>Others</span>
+                                            <span class="legend-value">10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Forum Content -->
+            <div id="forum-content" class="content-section">
+                <div class="container-fluid">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="page-title">Discussion Forum</h2>
+                            <p class="text-muted">Join the conversation with other users.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="forum-actions">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plus me-2"></i>New Topic
+                                </button>
+                                <div class="search-container">
+                                    <input type="text" class="form-control" placeholder="Search discussions...">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Forum Topics -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="forum-topics">
+                                <!-- Topic 1 -->
+                                <div class="forum-topic">
+                                    <div class="topic-avatar">
+                                        <span>JD</span>
+                                    </div>
+                                    <div class="topic-content">
+                                        <div class="topic-header">
+                                            <h5 class="topic-title">Data Visualization Best Practices</h5>
+                                            <span class="topic-badge hot">Hot</span>
+                                        </div>
+                                        <p class="topic-preview">I've been working on improving our dashboard visualizations and wanted to share some insights on best practices...</p>
+                                        <div class="topic-meta">
+                                            <span class="meta-item"><i class="fas fa-user me-1"></i>John Doe</span>
+                                            <span class="meta-item"><i class="fas fa-clock me-1"></i>2 hours ago</span>
+                                            <span class="meta-item"><i class="fas fa-comment me-1"></i>24 replies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Topic 2 -->
+                                <div class="forum-topic">
+                                    <div class="topic-avatar">
+                                        <span>AS</span>
+                                    </div>
+                                    <div class="topic-content">
+                                        <div class="topic-header">
+                                            <h5 class="topic-title">New Feature Request: Advanced Filters</h5>
+                                        </div>
+                                        <p class="topic-preview">Would it be possible to add advanced filtering options to the reporting section? I find myself needing to...</p>
+                                        <div class="topic-meta">
+                                            <span class="meta-item"><i class="fas fa-user me-1"></i>Alice Smith</span>
+                                            <span class="meta-item"><i class="fas fa-clock me-1"></i>1 day ago</span>
+                                            <span class="meta-item"><i class="fas fa-comment me-1"></i>8 replies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Topic 3 -->
+                                <div class="forum-topic">
+                                    <div class="topic-avatar">
+                                        <span>RJ</span>
+                                    </div>
+                                    <div class="topic-content">
+                                        <div class="topic-header">
+                                            <h5 class="topic-title">Introduction: New Data Analyst Joining the Team</h5>
+                                            <span class="topic-badge announcement">Announcement</span>
+                                        </div>
+                                        <p class="topic-preview">Hello everyone! I'm Robert, the new data analyst joining the team this week. I'm excited to collaborate...</p>
+                                        <div class="topic-meta">
+                                            <span class="meta-item"><i class="fas fa-user me-1"></i>Robert Johnson</span>
+                                            <span class="meta-item"><i class="fas fa-clock me-1"></i>3 days ago</span>
+                                            <span class="meta-item"><i class="fas fa-comment me-1"></i>16 replies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile Content -->
+            <div id="profile-content" class="content-section">
+                <div class="container-fluid">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="page-title">Your Profile</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-body text-center p-4">
+                                    <div class="profile-avatar">
+                                        <span id="profile-page-initial"></span>
+                                    </div>
+                                    <h4 class="mt-3 mb-1" id="profile-page-name">User Name</h4>
+                                    <p class="text-muted" id="profile-page-email">user@example.com</p>
+                                    <button class="btn btn-outline-primary mt-3">
+                                        <i class="fas fa-camera me-2"></i>Change Photo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8 mb-4">
+                            <div class="card dashboard-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Account Details</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="profile-form">
+                                        <div class="mb-3">
+                                            <label class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="profile-name" placeholder="Your name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="profile-email" placeholder="Your email" disabled>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Job Title</label>
+                                            <input type="text" class="form-control" id="profile-job" placeholder="Your job title">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Location</label>
+                                            <input type="text" class="form-control" id="profile-location" placeholder="Your location">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label class="form-label">Bio</label>
+                                            <textarea class="form-control" id="profile-bio" rows="3" placeholder="About you"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-save me-2"></i>Save Changes
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

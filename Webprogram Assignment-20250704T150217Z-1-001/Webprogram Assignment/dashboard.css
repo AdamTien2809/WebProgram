@@ -1,0 +1,589 @@
+/* Global Styles */
+body {
+    background-color: #030a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e1e6f0;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #081329;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.navbar-nav .nav-link {
+    color: #8a94a6;
+    font-weight: 1000;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #2e8ee5;
+}
+
+.nav-link::after {
+    display: none !important;
+}
+
+.nav-link img {
+    width: 7%;
+    height: 7%;
+    margin-right: 0.5rem;
+}
+
+.navbar-toggler {
+    color: #8a94a6;
+    border: none;
+}
+
+.profile-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #2e8ee5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #0e1c38;
+    border: 1px solid #1a2a4a;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 240px;
+}
+
+.dropdown-header {
+    color: #e1e6f0;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+}
+
+.dropdown-item {
+    color: #8a94a6;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #1a2a4a;
+    color: #2e8ee5;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #1a2a4a;
+    margin: 0.5rem 0;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem 1.5rem;
+}
+
+.page-title {
+    font-weight: 700;
+    color: #e1e6f0;
+    margin-bottom: 0.5rem;
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stat Cards */
+.stat-card {
+    background-color: #0e1c38;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card-body {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.stat-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.blue-bg {
+    background: linear-gradient(135deg, #3776EC, #2E8EE5);
+}
+
+.green-bg {
+    background: linear-gradient(135deg, #00C6A7, #1E84EA);
+}
+
+.orange-bg {
+    background: linear-gradient(135deg, #FE904B, #FB724C);
+}
+
+.purple-bg {
+    background: linear-gradient(135deg, #836FFF, #5A55CA);
+}
+
+.stat-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #e1e6f0;
+}
+
+.stat-content p {
+    margin-bottom: 0;
+    color: #8a94a6;
+    font-size: 0.875rem;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background-color: #0e1c38;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    height: 100%;
+}
+
+.dashboard-card .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid #1a2a4a;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-card .card-title {
+    margin-bottom: 0;
+    color: #e1e6f0;
+    font-weight: 600;
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+.form-select {
+    background-color: #081329;
+    border: 1px solid #1a2a4a;
+    color: #8a94a6;
+    font-size: 0.875rem;
+}
+
+/* Charts */
+.chart-container {
+    height: 300px;
+    position: relative;
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-top: 20px;
+    position: relative;
+}
+
+.chart-placeholder::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #1a2a4a;
+}
+
+.chart-placeholder::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #1a2a4a;
+}
+
+.chart-placeholder-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.chart-placeholder-bars .bar {
+    width: 40px;
+    background: linear-gradient(180deg, #3776EC 0%, #2E8EE5 100%);
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+}
+
+.chart-placeholder-bars .bar:hover {
+    background: linear-gradient(180deg, #60A5E8 0%, #3776EC 100%);
+    transform: scaleY(1.05);
+}
+
+/* Donut Chart */
+.donut-chart-placeholder {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+}
+
+.donut-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip: rect(0, 100px, 200px, 0);
+}
+
+.donut-segment:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip: rect(0, 200px, 200px, 100px);
+    background: var(--bg);
+    transform: rotate(calc(3.6deg * var(--offset)));
+}
+
+.donut-hole {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #0e1c38;
+    top: 35px;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e1e6f0;
+}
+
+.sources-legend {
+    margin-top: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 0.5rem;
+}
+
+.legend-value {
+    margin-left: auto;
+    color: #e1e6f0;
+    font-weight: 500;
+}
+
+/* Forum Styles */
+.forum-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.search-container input {
+    background-color: #0e1c38;
+    border: 1px solid #1a2a4a;
+    color: #e1e6f0;
+    padding-right: 2.5rem;
+}
+
+.search-container .fa-search {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a94a6;
+}
+
+.forum-topics {
+    background-color: #0e1c38;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.forum-topic {
+    padding: 1.5rem;
+    display: flex;
+    border-bottom: 1px solid #1a2a4a;
+    transition: background-color 0.3s ease;
+}
+
+.forum-topic:last-child {
+    border-bottom: none;
+}
+
+.forum-topic:hover {
+    background-color: #102040;
+}
+
+.topic-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1a2a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e1e6f0;
+    font-weight: 500;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.topic-content {
+    flex-grow: 1;
+}
+
+.topic-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.topic-title {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #e1e6f0;
+    margin-right: 1rem;
+}
+
+.topic-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.topic-badge.hot {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.topic-badge.announcement {
+    background-color: #2e8ee5;
+    color: white;
+}
+
+.topic-preview {
+    color: #8a94a6;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.topic-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.meta-item {
+    color: #8a94a6;
+    font-size: 0.8rem;
+}
+
+/* Profile Styles */
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #2e8ee5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    margin: 5rem auto;
+}
+
+.profile-form .form-control {
+    background-color: #0e1c38;
+    border: 1px solid #1a2a4a;
+    color: #e1e6f0;
+}
+
+.profile-form .form-control:focus {
+    background-color: #0e1c38;
+    border-color: #2e8ee5;
+    box-shadow: 0 0 0 0.25rem rgba(46, 142, 229, 0.15);
+    color: #e1e6f0;
+}
+
+.profile-form .form-label {
+    color: #e1e6f0;
+}
+
+.profile-body {
+    text-align: center;
+    color: #e1e6f0;
+}
+
+#profile-page-name,
+#profile-page-email {
+    color: #ffffff !important;
+}
+
+
+/* Button Styles */
+.btn {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #2e8ee5 0%, #3776ec 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #3776ec 0%, #2e8ee5 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 142, 229, 0.3);
+}
+
+.btn-outline-primary {
+    border: 1px solid #2e8ee5;
+    color: #2e8ee5;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(46, 142, 229, 0.1);
+    color: #2e8ee5;
+    border-color: #2e8ee5;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    .forum-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .forum-topic {
+        flex-direction: column;
+    }
+    
+    .topic-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .topic-meta {
+        gap: 0.5rem;
+    }
+    
+    .stat-card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .chart-placeholder-bars .bar {
+        width: 20px;
+    }
+}
