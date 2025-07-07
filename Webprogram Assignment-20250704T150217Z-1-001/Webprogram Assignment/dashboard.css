@@ -24,15 +24,15 @@ body {
     z-index: 1000;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+.navbar-brand img {
+    width: 7%;
+    height: 7%;
 
+}
 
 .navbar-nav .nav-link {
     color: #8a94a6;
-    font-weight: 1000;
+    font-weight: 500;
     padding: 0.75rem 1rem;
     transition: color 0.3s ease;
 }
@@ -40,16 +40,6 @@ body {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: #2e8ee5;
-}
-
-.nav-link::after {
-    display: none !important;
-}
-
-.nav-link img {
-    width: 7%;
-    height: 7%;
-    margin-right: 0.5rem;
 }
 
 .navbar-toggler {
@@ -223,7 +213,10 @@ body {
 
 .dashboard-card .card-body {
     padding: 1.5rem;
+    color: white;
 }
+
+.dashboard-card 
 
 .form-select {
     background-color: #081329;
@@ -484,7 +477,7 @@ body {
     font-size: 2.5rem;
     font-weight: 500;
     color: white;
-    margin: 5rem auto;
+    margin: 7rem auto;
 }
 
 .profile-form .form-control {
@@ -501,11 +494,6 @@ body {
 }
 
 .profile-form .form-label {
-    color: #e1e6f0;
-}
-
-.profile-body {
-    text-align: center;
     color: #e1e6f0;
 }
 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread - ECVG Discussion Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="thread.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/dashboard.html">
+                    <img src="/public/assets/logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="dashboard-link">
+                                <i class="fas fa-chart-line me-2"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="forum-link">
+                                <i class="fas fa-comments me-2"></i>Discussion Forum
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="profile-icon">
+                                    <span id="profile-initial"></span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><h6 class="dropdown-header">Welcome, <span id="user-name">User</span>!</h6></li>
+                                <li><a class="dropdown-item" href="#" id="view-profile"><i class="fas fa-user me-2"></i>View Profile</a></li>
+                                <li><a class="dropdown-item" href="#" id="settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" id="logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Thread Content -->
+            <div id="thread-content" class="content-section active">
+                <div class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <a href="dashboard.html?view=forum" id="back-to-forum" class="btn btn-sm btn-outline-primary mb-3">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Forum
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Thread Main Post -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card dashboard-card thread-main-post mb-4">
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title thread-title mb-0" id="thread-title">Loading topic...</h5>
+                                        <span class="topic-badge" id="thread-badge"></span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="thread-avatar me-3">
+                                            <span id="thread-author-initial">...</span>
+                                        </div>
+                                        <div>
+                                            <h6 class="thread-author mb-1" id="thread-author">Loading...</h6>
+                                            <p class="text-muted small mb-0" id="thread-date">
+                                                <i class="fas fa-clock me-1"></i>Loading...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="thread-content" id="thread-content-text">
+                                        <p>Loading content...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Thread Replies -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h6 class="replies-header"><span id="reply-count">0</span> Replies</h6>
+                            <div class="thread-replies" id="thread-replies">
+                                <!-- Replies will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add Comment Form -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <h6 class="mb-3">Add Your Comment</h6>
+                                    <form id="comment-form">
+                                        <div class="mb-3">
+                                            <textarea class="form-control" id="comment-text" rows="3" placeholder="Write your comment here..."></textarea>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-paper-plane me-2"></i>Post Comment
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="thread.js"></script>
+</body>
+</html>
